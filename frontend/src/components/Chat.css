@@ -1,0 +1,342 @@
+
+.chat{
+    display:flex;
+    flex-direction:column;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    background: #f0f0f0;
+    border-radius: 10px;
+    height:650px;
+    width: 400px;
+    transition: all 400ms;
+}
+
+.ai-message{
+    align-self: flex-start;
+    flex-direction: row-reverse;
+    align-items: center;
+    display: flex;
+    margin-bottom:1rem;
+
+}
+.human-message{
+    align-self: flex-end;
+    display: flex;
+    align-items: center;
+    margin-bottom:1rem;
+
+}
+.ai-message-text{
+    background-color: rgb(55, 142, 204) !important;
+    padding:0.3rem;
+    border-radius: 0.5rem;
+    border-bottom-left-radius: 0.1rem;
+    max-width: 300px;
+    text-align: left !important;;
+    margin-left: 0.5rem;
+}
+.ai-message-img{
+    border-radius: 50%;
+    padding:0.1rem;
+    box-shadow: 0 0 70px rgba(67, 66, 66, 0.6);
+    align-self: flex-end;
+    margin-left:0.5rem; 
+}
+
+.human-message-img{
+    border-radius: 50%;
+    padding:0.1rem;
+    box-shadow: 0 0 70px rgba(67, 66, 66, 0.6);
+    align-self: flex-end;
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+.human-message-text{
+    background-color: pink !important;
+    padding:0.3rem;
+    border-radius: 0.5rem;
+
+    border-bottom-right-radius: 0.1rem;
+    max-width: 300px;
+    text-align: right !important;;
+    margin-right: 0.5rem;
+}
+.input-box{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 0.5rem;
+}
+.input-box input{
+    float: left;
+    height: 40px;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    margin: 0 0.5rem 0 0;
+    width: calc(100% - 52px);
+    background-color: #dedfed;
+    box-shadow: inset 0 0 0 2px #dedfed;
+    font-size: 14px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    transition: 0.15s all;
+    box-sizing: border-box;
+}
+.input-box input:hover{
+    border:none;
+}
+.input-box input:focus{
+    outline: none;
+    box-shadow: inset 0 0 0 2px #7690d6;
+    border:none;
+}
+
+.send-button{
+    height:40px;
+    background-color: #7690d6;
+    width:40px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    transition:all 200ms;
+    padding:0.2rem;
+
+}
+.send-icon{
+  transition:all 200ms;
+  opacity: 0;
+}
+.active{
+  opacity: 1;
+}
+.send-button:hover{
+  cursor:pointer;
+  scale:1.04;
+}
+.send-button:active{
+  scale: 0.93;
+}
+.typing{
+  position: absolute;
+  bottom: 0;
+  margin-bottom: -20px;
+  background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.shadow-effect {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  }
+  
+  @keyframes shadow-color {
+    0% {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    }
+    50% {
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    }
+    100% {
+      box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    }
+  }
+  
+  .shadow-effect {
+    animation: shadow-color 5s ease-in-out infinite alternate;
+    animation-delay: 2s; /* Wait 2 seconds before starting the animation */
+  }
+  
+  .internal-effect{
+    margin-top:6px;
+    height:100%;
+    width:100%;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+  }
+  @keyframes color {
+    0% {
+      box-shadow: 0 0 600px rgba(72, 184, 158, 0.5), 0 0 10px rgb(255, 255, 255) inset;
+      filter: hue-rotate(0deg);
+    }
+    70% {
+      box-shadow: 0 0 200px rgba(196, 221, 56, 0.5), 0 0 10px rgba(255, 255, 255, 0) inset;
+      filter: hue-rotate(0deg);
+    }
+    95% {
+        box-shadow: 0 0 300px rgba(138, 54, 190, 0.5), 0 0 100px #fff inset;
+        filter: hue-rotate(0deg);
+      }
+      100% {
+        box-shadow: 0 0 600px  rgba(72, 184, 158, 0.5),  0 0 100px #fff inset;
+        filter: hue-rotate(0deg);
+      } 
+  }
+  
+  .shadow-effect {
+    animation: color 50s ease-in-out infinite;
+  }
+  .shadow-effect {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), 
+                0 0 20px rgba(0, 0, 0, 0.7), 
+                0 0 30px rgba(0, 0, 0, 0.5), 
+                0 0 10px rgba(255, 255, 255, 0) inset, 
+                0 0 20px rgba(255, 255, 255, 0) inset, 
+                0 0 30px rgba(255, 255, 255, 0) inset;
+  }
+.snippet{
+  transition: opacity 0.5s ease-out;
+}
+
+  .dot-elastic {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(58, 64, 168);
+    color: rgb(58, 64, 168);
+    animation: dot-elastic 1s infinite linear;
+  }
+  .dot-elastic::before, .dot-elastic::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    top: 0;
+  }
+  .dot-elastic::before {
+    left: -15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color: rgb(58, 64, 168);
+    color:rgb(58, 64, 168) ;
+    animation: dot-elastic-before 1s infinite linear;
+  }
+  .dot-elastic::after {
+    left: 15px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background-color:rgb(58, 64, 168) ;
+    color: rgb(58, 64, 168);
+    animation: dot-elastic-after 1s infinite linear;
+  }
+  
+  @keyframes dot-elastic-before {
+    0% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(1, 1.5);
+    }
+    50% {
+      transform: scale(1, 0.67);
+    }
+    75% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  @keyframes dot-elastic {
+    0% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1, 1.5);
+    }
+    75% {
+      transform: scale(1, 1);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  @keyframes dot-elastic-after {
+    0% {
+      transform: scale(1, 1);
+    }
+    25% {
+      transform: scale(1, 1);
+    }
+    50% {
+      transform: scale(1, 0.67);
+    }
+    75% {
+      transform: scale(1, 1.5);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+
+  .internal-effect::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+	background-color: #F5F5F5;
+	border-radius: 10px;
+}
+
+.internal-effect::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+
+}
+
+.internal-effect::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+	background-color: #FFF;
+	background-image: -webkit-gradient(linear,
+									   40% 0%,
+									   75% 84%,
+									   from(#4D9C41),
+									   to(#19911D),
+									   color-stop(.6,#54DE5D))
+}
